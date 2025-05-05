@@ -1,0 +1,380 @@
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --card-bg: #1E3A5F;
+    --header-bg: #4A90E2;
+    --footer-bg: #4A90E2;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+html {
+    background: #333;
+    scroll-behavior: smooth;
+}
+
+body.dark-theme {
+    background: #2b2b2b;
+    background-repeat: no-repeat;
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #2C3E50;
+    --header-bg: #1E3A5F;
+    --footer-bg: #1E3A5F;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background: rgba(240, 240, 240, 0.8);
+    background-color: var(--bg-color); /* Use background-color as fallback */
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background 0.5s ease;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background: linear-gradient(to bottom, #1E3A5F, #162c4a);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideInDown 0.7s ease-out;
+}
+
+.theme-toggle {
+    background-color: var(--header-bg);  /* Same background as the header */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.theme-toggle:hover {
+    background-color: #3664A2;  /* A darker shade for hover */
+    transform: scale(1.1);
+}
+
+.theme-toggle:active {
+    background-color: #2A4C75;  /* A more subtle color for when clicked */
+    transform: scale(1);
+}
+
+.theme-toggle i {
+    pointer-events: none; /* Prevent interaction with icon separately */
+}
+
+/* Basic styles for the button */
+.nav-main-menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menu styles */
+#main-menu {
+    background-color: none;
+    color: white;
+    display: none;  /* Hidden by default */
+}
+
+#main-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#main-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Show the menu when the hidden attribute is removed (i.e., menu is shown) */
+#main-menu:not([hidden]) {
+    display: block;
+}
+
+.hamburger {
+    display: flex;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, #1E3A5F, #162c4a);
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001;
+    justify-content: center;
+    color: white;
+}
+
+.sidebar {
+    display: block;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease; /* Smooth transition */
+}
+
+.sidebar.open {
+    display: block;
+}
+
+.sidebar > h2 {
+    display: none;
+}
+
+.sidebar > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0;
+    margin: 0.5rem 0 0.5rem 0;
+    list-style-type: none;
+}
+
+.sidebar > ul > li {
+    background: linear-gradient(to bottom, #1E3A5F, #162c4a);
+    border-top: 4px solid #ffffff25;
+    border-radius: 0.5rem;
+}
+
+.sidebar > ul > li > a {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+#projects {
+    display: block;
+    transition: opacity 0.5s ease;
+    border-radius: 0.5rem;
+}
+
+#projects.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Style for the toggle button */
+.toggle-btn {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #1E3A5F, #162c4a);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid rgba(240, 240, 240, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.toggle-btn:hover {
+    background-color: #3664A2;
+    transform: translateY(-2px);
+}
+
+.toggle-btn:active {
+    background-color: #2A4C75;
+    transform: translateY(0);
+}
+
+.toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(72, 116, 194, 0.5);
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.filter button {
+    background-color: var(--header-bg);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid rgba(240, 240, 240, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filter button:hover {
+    background-color: #3664A2;
+    transform: translateY(-2px);
+}
+
+.filter button:active {
+    background-color: #2A4C75;
+    transform: translateY(0);
+}
+
+.filter button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(72, 116, 194, 0.5);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+}
+
+.card {
+    background-color: #1E3A5F;
+    color: white;
+    border: 1px solid rgba(240, 240, 240, 0.1);
+    border-radius: 10px;
+    height: 100px;  /* Fixed height to make all cards uniform in size */
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+    z-index: 10;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+footer {
+    background: linear-gradient(to bottom, #1E3A5F, #162c4a);
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        margin-left: 225px;
+        padding-left: 1.75rem;
+        padding-right: 0.5rem;
+    }
+
+    #projects {
+        border-radius: 14px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        text-decoration: none;
+    }
+
+    .filter {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .filter button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .hamburger {
+        display: none; /* Hidden by default */
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100vh;
+        background: linear-gradient(to bottom, #1E3A5F, #162c4a);
+        color: white;
+        padding: 2rem 1rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .sidebar .logo {
+        font-size: 1.5rem;
+        font-family: 'Lora', serif;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .sidebar ul li {
+        margin-bottom: 1.5rem;
+    }
+    
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    .sidebar ul li a:hover {
+        color: #cce3ff;
+    }
+}

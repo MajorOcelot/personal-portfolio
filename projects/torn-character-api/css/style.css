@@ -1,0 +1,114 @@
+body {
+    font-family: 'Lora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2e3b4e, #1a2a6c, #121f38); /* Darker gradient colors */
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Align elements in column */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes full height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+
+a {
+    color: white;
+    display: block;
+    margin-top: 1rem;
+}
+  
+  header {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+  
+  #stock-table {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent table background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Ensures table is fully responsive */
+    max-width: 1200px; /* Ensures table doesn't grow too wide */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    margin-top: 20px; /* Adds spacing between header and table */
+    max-height: 60vh; /* Limit height of table */
+    overflow-y: auto; /* Makes the table scrollable if too large */
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Prevents column width issues */
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    overflow: hidden; /* Prevents text from overflowing */
+  }
+  
+  th {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  td {
+    background-color: #fff;
+    color: #333;
+    font-size: 1.1em;
+  }
+  
+  td, th {
+    border: 1px solid #ddd;
+  }
+  
+  tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+/* Profit and Loss Row Styles for Entire Row */
+tr.profit {
+    color: #fff; /* Ensures text is white in profit rows */
+  }
+  
+  tr.loss {
+    color: #fff; /* Ensures text is white in loss rows */
+  }
+  
+  /* Subtle Background Colors for Each Cell */
+  tr.profit .stock-cell {
+    background-color: #a8e6a1; /* Light green for profit cells */
+  }
+  
+  tr.loss .stock-cell {
+    background-color: #f8c2c2; /* Light red for loss cells */
+  }
+  
+  tr td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  tr:hover {
+    background-color: #f0f0f0; /* Slight hover effect for rows */
+  }
+  
+td:nth-child(4) {
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 75%;
+        margin: 0 auto;
+    }
+}

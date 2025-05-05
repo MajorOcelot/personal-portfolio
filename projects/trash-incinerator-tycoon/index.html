@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle RPG Prototype</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div id="levelUpMessage"></div>
+
+        <div id="game">
+            <div class="header-wrapper">
+              <header>
+                <h1>Trash Incinerator Tycoon</h1>
+              </header>
+              <div id="stats" class="stats-panel">
+                <h2>Stats</h2>
+                <div class="stat">
+                  <span class="label">Level:</span>
+                  <span id="levelUpInlineMessage" class="inline-bonus"></span>
+                  <span id="level" class="value">1</span>
+                </div>
+                <div class="stat">
+                  <span class="label">Burner:</span>
+                  <span id="burnerLevelUpMessage" class="inline-bonus"></span>
+                  <span id="burnerLevel" class="value">1</span>
+                </div>
+                <div class="stat">
+                  <span class="label">Garbage:</span>
+                  <span id="garbage" class="value">0.0</span>
+                </div>
+                <div class="stat">
+                  <span class="label">Money:</span>
+                  <span id="money" class="value">$0.00</span>
+                </div>
+                <div class="stat">
+                  <span class="label">Burn Rate:</span>
+                  <span id="burnRate" class="value">1.0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-label">Level Progress</div>
+            <div id="xpBarContainer">
+              <div id="xpBar" class="progress-fill"></div>
+            </div>
+
+            <div id="main">
+              <div id="left"> 
+                <button id="burn">Burn Garbage</button>
+                <p>Garbage Burned: <span id="garbage">0</span> lbs</p>
+              </div>
+          
+              <div id="logContainer">
+                <div class="logContainerHeader">
+                  <div id="shop">
+                    <button id="upgradeBurner">Upgrade Burner (Cost: $50)</button>
+                  </div>
+                  <h2>Burner Log</h2>
+                </div>
+                <div class="progress-bar-burner">
+                  <div class="progress-label"><p>Burner Upgrade Progress</p></div>
+                  <div id="burnerBarContainer" class="progress-container">
+                    <div id="burnerBar" class="progress-fill burner"></div>
+                  </div>
+                </div>
+                <div id="log"></div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
