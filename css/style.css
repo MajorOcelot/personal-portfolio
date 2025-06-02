@@ -32,12 +32,18 @@ a:hover {
 
 /* Navbar */
 .navbar {
+  position: fixed;       /* Fix it to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;         /* Make sure it stays above other content */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.9); /* Slight transparency */
   border-bottom: 1px solid #333;
+  backdrop-filter: blur(8px);  /* Optional: adds a modern glass blur effect */
 }
 
 .logo {
@@ -126,6 +132,7 @@ a:hover {
   scroll-snap-align: start;
   height: 100vh;
   padding: 4rem 2rem;
+  padding-top: 6rem; /* Add enough space so content isn't hidden under navbar */
   display: flex;
   flex-direction: column;
   justify-content: center;
