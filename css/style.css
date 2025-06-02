@@ -67,92 +67,98 @@ a:hover {
   color: #64ffda;
 }
 
+.nav-links a.active {
+    color: #64ffda;
+    border-bottom: 2px solid #64ffda;
+}
+
 /* Hero section */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  text-align: center;
-  padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    text-align: center;
+    padding: 0 2rem;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  color: #b0b0b0;
+    font-size: 1.2rem;
+    color: #b0b0b0;
 }
 
 /* Section styling */
 .section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: auto;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
 }
 
 /* Projects grid */
 .projects-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .project-card {
-  background-color: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #333;
-  transition: transform 0.3s ease;
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 /* Scroll container & sections */
 .scroll-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .scroll-section {
-  scroll-snap-align: start;
-  height: 100vh;
-  padding: 4rem 2rem;
-  padding-top: 6rem; /* Add enough space so content isn't hidden under navbar */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    scroll-snap-align: start;
+    scroll-margin-top: 5rem; /* Pushes the section down when scrolled into view */
+    height: 100vh;
+    padding: 4rem 2rem;
+    padding-top: 6rem; /* Add enough space so content isn't hidden under navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .scroll-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .scroll-section p,
 .scroll-section .projects-grid {
-  max-width: 700px;
-  text-align: center;
+    max-width: 700px;
+    text-align: center;
 }
 
 /* Footer */
 footer {
-  position: sticky;
-  bottom: 0;
-  background-color: #121212;
+    position: sticky;
+    bottom: 0;
+    background-color: #121212;
 }
