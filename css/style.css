@@ -106,6 +106,18 @@ a:hover {
     color: #ffffff;
 }
 
+.about-section {
+    display: flex;
+    gap: 1rem;
+    border: 1px solid white;
+    padding: 1rem;
+}
+
+.skill {
+    border: 1px solid white;
+    padding: 1rem;
+}
+
 /* Projects grid */
 .projects-grid {
     display: grid;
