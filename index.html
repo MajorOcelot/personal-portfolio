@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <h1 class="typing-text">My Portfolio</h1>
-            <button class="theme-toggle">
-                <i class="fas fa-moon"></i> <!-- Font Awesome moon icon -->
-            </button>
-        </header>
-        <button class="hamburger nav-main-menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Open menu">
-            ☰
-        </button>
-        <nav id="main-menu" class="sidebar">
-            <h2 class="logo">My Portfolio</h2>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="projects/index.html">Projects</a></li>
-            </ul>
+    <header>
+        <nav class="navbar">
+        <div class="logo">YourName</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
         </nav>
-        <main>
-            <section>
-                <h2>About Me</h2>
-                <p>My name is Alex Dreis. I'm a Full Stack Web Developer based out of Green Bay, WI.</p>
-            </section>
-            <section>
-                <h2>Skills</h2>
-                <p>I'm currently fairly proficient in HTML and CSS. I have a very novice understanding of JavaScript.</p>
-                <p>My future prospects are React, C# and SQL</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Alexander Dreis. All rights reserved.</p>
-        </footer>
-    </div>
+    </header>
+
+    <main class="scroll-container">
+        <section id="about" class="scroll-section">
+        <h2>About Me</h2>
+        <p>I’m a developer focused on clean, user-friendly experiences...</p>
+        </section>
+
+        <section id="projects" class="scroll-section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Project cards -->
+        </div>
+        </section>
+
+        <section id="contact" class="scroll-section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
