@@ -155,6 +155,16 @@ a:hover {
     padding: 1rem;
 }
 
+.about-section > div > a {
+    width: 50px;
+    height: 50px;
+}
+
+.about-section > div > a > img {
+    width: 50px;
+    height: 50px;
+}
+
 .skill {
     border: 1px solid white;
     padding: 1rem;
