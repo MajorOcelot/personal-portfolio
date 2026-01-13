@@ -5,7 +5,7 @@
 }
 
 html {
-    background-color: black;
+    background-color: #151515;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
@@ -31,6 +31,8 @@ html {
 .nav-links {
     list-style: none;
     display: flex;
+    flex-direction: column;
+    width: 75%;
     text-align: center;
     gap: 8px;
     margin-top: 8px;
@@ -45,6 +47,8 @@ html {
     font-size: 1.2rem;
     border: 2px solid white;
     border-radius: 8px;
+    background-color: white;
+    color: black;
 }
 
 #about {
@@ -54,20 +58,58 @@ html {
     text-align: center;
 }
 
-.skills-section {
+.about-me {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 12px;
     margin-top: 1rem;
-}
-
-.about-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
+    background-color: #292929;
+    padding: 1rem;
     border: 2px solid rgba(255, 255, 255, 0.452);
     border-radius: 8px;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 1rem;
+    background-color: #292929;
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.452);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #292929;
+}
+
+#projects {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    background-color: #292929;
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.452);
+    border-radius: 8px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
 }
 
 img {
@@ -76,13 +118,22 @@ img {
 }
 
 footer {
-    margin-top: 3rem;
-    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fb7e14;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: black;
 }
 
 @media (min-width: 600px) {
     #wrapper {
-        width: 95%;
+        width: 80%;
     }
 
     .navbar {
