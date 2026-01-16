@@ -113,7 +113,9 @@ html {
     width: 100%;
 }
 
-.c-sharp-projects {
+.c-sharp-projects, 
+.cpp-projects,
+.python-projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,9 +198,9 @@ footer {
 
     .project-card-header {
         display: flex;
-        flex-direction: row;
         align-items: center;
         gap: 1rem;
+        width: 45%;
     }
     
     .project-card {
@@ -206,5 +208,12 @@ footer {
         align-items: center;
         width: 100%;
         text-align: left;
+    }
+
+    .project-card-content {
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        width: 55%;
     }
 }
