@@ -202,12 +202,21 @@ footer {
         gap: 1rem;
         width: 45%;
     }
+
+    project-card-header:hover {
+        color: #fb7e14;
+    }
     
     .project-card {
         flex-direction: row;
         align-items: center;
         width: 100%;
         text-align: left;
+    }
+
+    .project-card:hover {
+        transform: scale(1.02);
+        border-color: white;
     }
 
     .project-card-content {
