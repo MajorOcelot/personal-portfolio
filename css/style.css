@@ -198,9 +198,9 @@ footer {
 
     .project-card-header {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         gap: 0.5rem;
-        width: 45%;
+        width: 50%;
     }
 
     project-card-header:hover {
@@ -212,6 +212,7 @@ footer {
         align-items: center;
         width: 100%;
         text-align: left;
+        gap: 1rem;
     }
 
     .project-card:hover {
@@ -223,7 +224,7 @@ footer {
         text-align: left;
         align-self: center;
         justify-self: center;
-        width: 55%;
+        width: 50%;
     }
 
     .cpp-projects a > div,
