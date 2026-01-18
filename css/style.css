@@ -219,10 +219,15 @@ footer {
         gap: 1rem;
     }
 
+    .language-logo {
+        width: 50px;
+        height: 50px;
+    }
+
     .project-card:hover,  /* Fix hover effect for both */
     .language-logo:hover {
         transform: scale(1.02);
-        border: 1px solid white;
+        border-bottom: 1px solid white;
         border-color: white;
     }
 
