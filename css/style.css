@@ -112,7 +112,8 @@ html {
 
 .c-sharp-projects, 
 .cpp-projects,
-.python-projects {
+.python-projects,
+.java-projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,7 +124,8 @@ html {
 
 .c-sharp-projects > h2,
 .cpp-projects > h2,
-.python-projects > h2 {
+.python-projects > h2,
+.java-projects > h2 {
     margin-top: 1rem;
 }
 
@@ -239,7 +241,8 @@ footer {
     }
 
     .cpp-projects a > div,
-    .python-projects a > div {
+    .python-projects a > div,
+    .java-projects a > div {
         display: flex;
         align-items: center;
         justify-content: center;
