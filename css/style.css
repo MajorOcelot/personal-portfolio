@@ -103,10 +103,9 @@ html {
     border-radius: 8px;
 }
 
-.projects-grid, .c-sharp-projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
+.projects-grid {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -208,10 +207,6 @@ footer {
         gap: 0.5rem;
         width: 50%;
     }
-
-    project-card-header {
-        color: #fb7e14;
-    }
     
     .project-card {
         flex-direction: row;
@@ -238,15 +233,5 @@ footer {
         align-self: center;
         justify-self: center;
         width: 50%;
-    }
-
-    .cpp-projects a > div,
-    .python-projects a > div,
-    .java-projects a > div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
     }
 }
