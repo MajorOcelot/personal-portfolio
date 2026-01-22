@@ -18,7 +18,7 @@ html {
 }
 
 .navbar {
-    background-color: #fb7e14;
+    background-color: #149ffb;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,7 +32,7 @@ html {
     list-style: none;
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 95%;    
     text-align: center;
     gap: 8px;
     margin-top: 8px;
@@ -43,7 +43,7 @@ html {
     justify-content: center;
     width: 100%;
     text-decoration: none;
-    padding: 4px;
+    padding: 8px;
     font-size: 1.2rem;
     border: 2px solid white;
     border-radius: 8px;
@@ -67,6 +67,23 @@ html {
     padding: 1rem;
     border-radius: 8px;
     width: 100%;
+}
+
+.github-link {
+    color: #149ffb;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+.github-link:visited {
+    color: #0d6efd;
+}
+
+.github-link:active {
+    color: #0a58ca;
 }
 
 .skills {
@@ -162,7 +179,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fb7e14;
+    background-color: #149ffb;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-top: 2rem;
@@ -178,15 +195,15 @@ footer {
     }
 
     .navbar {
-        flex-direction: column;
-        align-items: center;
-
+        flex-direction: row;
+        width: 100%;
     }
 
     .nav-links {
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        margin-left: 1rem;
+        width: 100%;
     }
 
     .skills-section {
