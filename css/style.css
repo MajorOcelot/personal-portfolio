@@ -190,6 +190,11 @@ footer {
         width: 75%;
     }
 
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
     .navbar {
         flex-direction: row;
         width: 100%;
